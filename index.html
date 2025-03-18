@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GO LINKS</title>
+  <style>
+    /* Basic CSS to style the page */
+    body {
+      margin: 0;
+      font-family: copperplate, sans-serif;
+      font-weight: bold;
+      height: 100vh;
+      background:linear-gradient(to bottom, #a9a4a5 50%, #ca94a9 50%);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+      flex-direction: column;
+      text-align: center;
+    }
+
+    #main-heading {
+      font-size: 4rem;
+      background: linear-gradient(to bottom, #a9a4a5 57%, #ca94a9 33%);
+      color: white;
+      padding: 20px;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: all 0.3s ease-in-out;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 300px;
+      height: 100px;
+      margin-bottom: 20px;
+    }
+
+    .clicked {
+      font-size: 2.5rem; 
+      padding: 15px;
+    }
+
+    #options {
+      display: none;
+      margin-top: 20px;
+      text-align: center;
+      flex-direction: row;
+      justify-content: space-evenly;
+      width: 100%;
+      opacity: 0;
+      transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+    }
+
+    .option {
+      font-size: 1.5rem;
+      background-color: none;
+      color: white;
+      padding: 10px 30px;
+      margin: 5px;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+      cursor: pointer;
+    }
+
+    .option:hover {
+      background-color: #666;
+    }
+
+    .sub-options {
+      display: none;
+      text-align: center;
+      margin-top: 20px;
+      flex-direction: row;
+      justify-content: space-evenly;
+      width: 100%;
+      opacity: 0;
+      transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+    }
+
+    .sub-option {
+      font-size: 1.5rem;
+      background-color: none;
+      color: white;
+      padding: 10px 30px;
+      margin: 5px;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+      cursor: pointer;
+    }
+
+    .sub-option:hover {
+      background-color: #666;
+    }
+
+    .sub-option:active{
+      opacity:0.7;
+      
+    }
+
+    /* Mobile responsiveness */
+    @media (max-width: 768px) {
+      #main-heading {
+        font-size: 3rem;
+        width: 250px;
+        height: 80px;
+      }
+
+      .option {
+        font-size: 1.2rem;
+        padding: 8px 20px;
+      }
+
+      .sub-option {
+        font-size: 1.2rem;
+        padding: 8px 20px;
+      }
+
+      #options {
+        flex-direction: column;
+      }
+
+      .sub-options {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+ 
+
+  <div id="main-heading" tabindex="0" aria-label="Click to view available categories">GO LINKS</div>
+ 
+  <div id="options">
+    <div class="option" data-category="social" tabindex="0" aria-label="Go to social media options">SOCIAL MEDIA</div>
+    <div class="option" data-category="anime" tabindex="0" aria-label="Go to anime options">ANIME</div>
+    <div class="option" data-category="movies" tabindex="0" aria-label="Go to movies and series options">MOVIES/SERIES</div>
+    <div class="option" data-category="shopping" tabindex="0" aria-label="Go to shopping options">SHOPPING</div>
+    <div class="option" data-category="ebooks" tabindex="0" aria-label="Go to ebooks and comics options">eBOOKS/COMICS</div>
+    <div class="option" data-category="news" tabindex="0" aria-label="Go to news options">NEWS</div>
+  </div>
+
+  <div id="sub-options-social" class="sub-options">
+    <a href="https://www.facebook.com" target="_blank" class="sub-option" title="Go to Facebook">Facebook</a>
+    <a href="https://www.instagram.com" target="_blank" class="sub-option" title="Go to Instagram">Instagram</a>
+    <a href="https://twitter.com" target="_blank" class="sub-option" title="Go to Twitter">Twitter</a>
+    <a href="https://www.youtube.com" target="_blank" class="sub-option" title="Go to YouTube">You Tube</a>
+    <a href="https://www.linkedin.com" target="_blank" class="sub-option" title="Go to LinkedIn">LinkedIn</a>
+  </div>
+
+  <div id="sub-options-anime" class="sub-options">
+    <a href="https://www.hianime.xyz" target="_blank" class="sub-option" title="Go to Hianime">Hianime</a>
+    <a href="https://www.crunchyroll.com" target="_blank" class="sub-option" title="Go to Crunchyroll">Crunchy Roll</a>
+    <a href="https://www.kaido.to" target="_blank" class="sub-option" title="Go to Kaido">Kaido</a>
+  </div>
+
+  <div id="sub-options-movies" class="sub-options">
+    <a href="https://www.tinyzonetv.to" target="_blank" class="sub-option" title="Go to Tiny Zone">Tiny Zone</a>
+    <a href="https://dramacool.so" target="_blank" class="sub-option" title="Go to Dramacool">Dramacool</a>
+    <a href="https://www.ibomma.to" target="_blank" class="sub-option" title="Go to Ibomma">Ibomma</a>
+  </div>
+
+  <div id="sub-options-shopping" class="sub-options">
+    <a href="https://www.amazon.com" target="_blank" class="sub-option" title="Go to Amazon">Amazon</a>
+    <a href="https://www.ebay.com" target="_blank" class="sub-option" title="Go to eBay">eBay</a>
+    <a href="https://www.flipkart.com" target="_blank" class="sub-option" title="Go to Flipkart">Flipkart</a>
+  </div>
+
+  <div id="sub-options-ebooks" class="sub-options">
+    <a href="https://www.gutenberg.org" target="_blank" class="sub-option" title="Go to Project Gutenberg">Project Gutenberg</a>
+    <a href="https://mangaplus.shueisha.co.jp" target="_blank" class="sub-option" title="Go to Manga Plus">Manga Plus</a>
+    <a href="https://www.viz.com" target="_blank" class="sub-option" title="Go to Viz Media">Viz Media</a>
+  </div>
+
+  <div id="sub-options-news" class="sub-options">
+    <a href="https://www.bbc.com" target="_blank" class="sub-option" title="Go to BBC">BBC</a>
+    <a href="https://www.cnn.com" target="_blank" class="sub-option" title="Go to CNN">CNN</a>
+    <a href="https://www.way2news.com" target="_blank" class="sub-option" title="Go to Way2News">Way2News</a>
+  </div>
+
+  <script>
+    const mainHeading = document.getElementById('main-heading');
+    const options = document.getElementById('options');
+    const subOptionsContainers = document.querySelectorAll('.sub-options');
+    const body = document.body;  // Access the body element to change background color
+
+    mainHeading.addEventListener('click', function() {
+      mainHeading.classList.add('clicked');
+      mainHeading.style.opacity = "0";
+      mainHeading.style.pointerEvents = "none";
+      mainHeading.style.marginBottom = "0";
+      
+      // Change background color of the body to a mix of #096C6C and grey
+      body.style.background = "linear-gradient(to bottom, #9B1C31 50%, #000 50%)"; 
+      
+      setTimeout(() => {
+        options.style.display = "flex";
+        options.style.opacity = "1";
+        options.style.transform = "translateY(20px)";
+      }, 300);
+    });
+
+    const optionElements = document.querySelectorAll('.option');
+    optionElements.forEach(option => {
+      option.addEventListener('click', function() {
+        const category = this.dataset.category;
+        options.style.display = "none";
+        mainHeading.style.display = "none";
+        subOptionsContainers.forEach(container => {
+          container.stye.dilsplay = "none";
+          container.style.opacity = "0";
+        });
+        const selectedSubOptions = document.getElementById('sub-options-' + category);
+        selectedSubOptions.style.display = "flex";
+        selectedSubOptions.style.opacity = "1";
+        selectedSubOptions.style.transform = "translateY(20px)";
+      });
+    });
+  </script>
+
+</body>
+</html>
